@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "314295579210",
+    "firebase_url": "https://firbaseremotconfigandroid.firebaseio.com",
+    "project_id": "firbaseremotconfigandroid",
+    "storage_bucket": "firbaseremotconfigandroid.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:314295579210:android:53bb9341c72e5545",
+        "android_client_info": {
+          "package_name": "datanapps.firbaseremotconfig"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "314295579210-ast3k1r4cj9j4173i8jobqrq4odqqvmd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "datanapps.firbaseremotconfig",
+            "certificate_hash": "6440279cf4d24edc4d9a496f399fec0883390e6c"
+          }
+        },
+        {
+          "client_id": "314295579210-to7j9ijj1b0elohoc169cp4377jp0sbq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC2xH0WsAk7OwCBux0eygB1g2Ft0DVofFE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "314295579210-to7j9ijj1b0elohoc169cp4377jp0sbq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
