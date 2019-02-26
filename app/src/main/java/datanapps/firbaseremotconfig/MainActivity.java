@@ -18,11 +18,15 @@ import com.google.firebase.remoteconfig.FirebaseRemoteConfigSettings;
 import java.util.HashMap;
 import java.util.Map;
 
+
+/*
+ * This is mainActivity which get data from remote config and display here
+ * */
 public class MainActivity extends AppCompatActivity {
 
     int cacheExpiration = 3600;
-
     private TextView tvRemoteMsg;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,13 +40,12 @@ public class MainActivity extends AppCompatActivity {
         remoteConfigTellCna();
     }
 
+
+    /*
+    * Remote config
+    *
+    * */
     private void remoteConfigTellCna() {
-        if(!isNetworkConnected()){
-            tvRemoteMsg.setText("Internet not working.");
-            return;
-        }
-
-
         final FirebaseRemoteConfig mFirebaseRemoteConfig = FirebaseRemoteConfig.getInstance();
         FirebaseRemoteConfigSettings configSettings = new FirebaseRemoteConfigSettings.Builder()
                 .setDeveloperModeEnabled(BuildConfig.DEBUG)
@@ -69,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
 
                                     String configGithubLink = mFirebaseRemoteConfig.getString("config_github_link");
                                     String configMsg = mFirebaseRemoteConfig.getString("config_welcome_msg");
-                                    tvRemoteMsg.setText(configGithubLink+"\n"+configMsg);
+                                    tvRemoteMsg.setText("Link: " + configGithubLink + "\n\n\n\n Name" + configMsg);
                                     mFirebaseRemoteConfig.activateFetched();
                                 } else {
                                     Toast.makeText(MainActivity.this, "Fetch Failed",
@@ -81,21 +84,16 @@ public class MainActivity extends AppCompatActivity {
             }
         }, 1000);
 
-
     }
 
-
+/*
+* Local default value to set in remote config
+*
+* */
     public Map<String, Object> getDefaultValues() {
         Map<String, Object> defaultValues = new HashMap<>();
         defaultValues.put("config_github_link", "Tell DataNapps");
         defaultValues.put("config_welcome_msg", "msg");
-
         return defaultValues;
-    }
-
-    private boolean isNetworkConnected() {
-        ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
-
-        return cm.getActiveNetworkInfo() != null;
     }
 }
