@@ -1,9 +1,11 @@
 # FirbaseRemoteConfigAndroid
 Firbase remote config android
 
-//=============================================================//
+//===========================================//
+
 This is sample in android (java/kotlin):
-//=============================================================//
+
+//===========================================//
 
     /*
      * This is mainActivity which get data from remote config and display here
