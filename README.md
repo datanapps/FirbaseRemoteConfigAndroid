@@ -7,6 +7,13 @@ This is sample in android (java/kotlin):
 
 //===========================================//
 
+
+![alt text](https://github.com/datanapps/FirbaseRemoteConfigAndroid/blob/master/screens/screen_1.png)
+
+
+//===========================================//
+
+
     /*
      * This is mainActivity which get data from remote config and display here
      * */
